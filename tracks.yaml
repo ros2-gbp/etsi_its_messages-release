@@ -1,4 +1,4 @@
-release_repo_url: git@github.com:ros2-gbp/etsi_its_messages-release.git
+release_repo_url: https://github.com/ros2-gbp/etsi_its_messages-release.git
 tracks:
   humble:
     actions:
