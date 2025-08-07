@@ -1,0 +1,12 @@
+Source: ros-kilted-etsi-its-rviz-plugins
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), python3-pyproj, qtbase5-dev, ros-kilted-ament-cmake, ros-kilted-etsi-its-cam-msgs, ros-kilted-etsi-its-cpm-ts-msgs, ros-kilted-etsi-its-denm-msgs, ros-kilted-etsi-its-mapem-ts-msgs, ros-kilted-etsi-its-msgs-utils, ros-kilted-etsi-its-spatem-ts-msgs, ros-kilted-pluginlib, ros-kilted-rclcpp, ros-kilted-ros-environment, ros-kilted-rviz-common, ros-kilted-rviz-default-plugins, ros-kilted-rviz-ogre-vendor, ros-kilted-rviz-rendering, ros-kilted-tf2, ros-kilted-tf2-geometry-msgs, ros-kilted-tf2-ros, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-etsi-its-rviz-plugins
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a, libqt5gui5, libqt5opengl5, libqt5widgets5, python3-pyproj, ros-kilted-etsi-its-cam-msgs, ros-kilted-etsi-its-cpm-ts-msgs, ros-kilted-etsi-its-denm-msgs, ros-kilted-etsi-its-mapem-ts-msgs, ros-kilted-etsi-its-msgs-utils, ros-kilted-etsi-its-spatem-ts-msgs, ros-kilted-pluginlib, ros-kilted-rclcpp, ros-kilted-ros-environment, ros-kilted-rviz-common, ros-kilted-rviz-default-plugins, ros-kilted-rviz-ogre-vendor, ros-kilted-rviz-rendering, ros-kilted-rviz2, ros-kilted-tf2, ros-kilted-tf2-geometry-msgs, ros-kilted-tf2-ros, ros-kilted-ros-workspace
+Description: RViz plugins for etsi_its_messages
