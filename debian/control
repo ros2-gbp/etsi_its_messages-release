@@ -1,0 +1,12 @@
+Source: ros-kilted-etsi-its-conversion
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-etsi-its-cam-conversion, ros-kilted-etsi-its-cam-ts-conversion, ros-kilted-etsi-its-cpm-ts-conversion, ros-kilted-etsi-its-denm-conversion, ros-kilted-etsi-its-denm-ts-conversion, ros-kilted-etsi-its-mapem-ts-conversion, ros-kilted-etsi-its-mcm-uulm-conversion, ros-kilted-etsi-its-spatem-ts-conversion, ros-kilted-etsi-its-vam-ts-conversion, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-udp-msgs, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-etsi-its-conversion
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-etsi-its-cam-conversion, ros-kilted-etsi-its-cam-ts-conversion, ros-kilted-etsi-its-cpm-ts-conversion, ros-kilted-etsi-its-denm-conversion, ros-kilted-etsi-its-denm-ts-conversion, ros-kilted-etsi-its-mapem-ts-conversion, ros-kilted-etsi-its-mcm-uulm-conversion, ros-kilted-etsi-its-spatem-ts-conversion, ros-kilted-etsi-its-vam-ts-conversion, ros-kilted-rclcpp, ros-kilted-rclcpp-components, ros-kilted-udp-msgs, ros-kilted-ros-workspace
+Description: Converts ROS messages to and from ASN.1-encoded ETSI ITS messages
