@@ -1,3 +1,60 @@
+## etsi_its_messages (kilted) - 3.3.0-1
+
+The packages in the `etsi_its_messages` repository were released into the `kilted` distro by running `/usr/local/bin/bloom-release --rosdistro kilted --track kilted etsi_its_messages` on `Thu, 07 Aug 2025 16:47:21 -0000`
+
+These packages were released:
+- `etsi_its_cam_coding`
+- `etsi_its_cam_conversion`
+- `etsi_its_cam_msgs`
+- `etsi_its_cam_ts_coding`
+- `etsi_its_cam_ts_conversion`
+- `etsi_its_cam_ts_msgs`
+- `etsi_its_coding`
+- `etsi_its_conversion`
+- `etsi_its_cpm_ts_coding`
+- `etsi_its_cpm_ts_conversion`
+- `etsi_its_cpm_ts_msgs`
+- `etsi_its_denm_coding`
+- `etsi_its_denm_conversion`
+- `etsi_its_denm_msgs`
+- `etsi_its_denm_ts_coding`
+- `etsi_its_denm_ts_conversion`
+- `etsi_its_denm_ts_msgs`
+- `etsi_its_mapem_ts_coding`
+- `etsi_its_mapem_ts_conversion`
+- `etsi_its_mapem_ts_msgs`
+- `etsi_its_mcm_uulm_coding`
+- `etsi_its_mcm_uulm_conversion`
+- `etsi_its_mcm_uulm_msgs`
+- `etsi_its_messages`
+- `etsi_its_msgs`
+- `etsi_its_msgs_utils`
+- `etsi_its_primitives_conversion`
+- `etsi_its_rviz_plugins`
+- `etsi_its_spatem_ts_coding`
+- `etsi_its_spatem_ts_conversion`
+- `etsi_its_spatem_ts_msgs`
+- `etsi_its_vam_ts_coding`
+- `etsi_its_vam_ts_conversion`
+- `etsi_its_vam_ts_msgs`
+
+Version of package(s) in repository `etsi_its_messages`:
+
+- upstream repository: https://github.com/ika-rwth-aachen/etsi_its_messages.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `3.3.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.0`
+- vcstools version: `0.1.42`
+
+
 ## etsi_its_messages (jazzy) - 3.3.0-1
 
 The packages in the `etsi_its_messages` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release -y --no-web --ros-distro jazzy --override-release-repository-push-url https://github.com/ros2-gbp/etsi_its_messages-release.git --no-pull-request --debug etsi_its_messages` on `Thu, 07 Aug 2025 15:28:23 -0000`
