@@ -25,19 +25,20 @@ SOFTWARE.
 */
 
 /**
- * @file mapem_ts_access.h
- * @brief Main MAPEM access header to include in ROS 1 projects
+ * @file mcm_access.hpp
+ * @brief Main MCM access header to include in ROS 2 projects
  */
 
 #pragma once
 
 // Messages
-#include <etsi_its_mapem_ts_msgs/MAPEM.h>
-#include <geometry_msgs/PointStamped.h>
+#include <etsi_its_mcm_uulm_msgs/msg/mcm.hpp>
+#include <geometry_msgs/msg/point_stamped.hpp>
 
-namespace etsi_its_mapem_ts_msgs {
-    namespace gm = geometry_msgs;
-}
+namespace etsi_its_mcm_uulm_msgs {
+using namespace msg;
+namespace gm = geometry_msgs::msg;
+}  // namespace etsi_its_mcm_uulm_msgs
 
 // Implementation
-#include <etsi_its_msgs_utils/impl/mapem/mapem_ts_access.h>
+#include <etsi_its_msgs_utils/impl/mcm/mcm_access.h>
