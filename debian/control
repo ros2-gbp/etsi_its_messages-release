@@ -1,0 +1,12 @@
+Source: ros-kilted-etsi-its-msgs-utils
+Section: misc
+Priority: optional
+Maintainer: Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), libgeographiclib-dev, ros-kilted-ament-cmake, ros-kilted-ament-cmake-gtest <!nocheck>, ros-kilted-etsi-its-msgs, ros-kilted-geometry-msgs, ros-kilted-tf2-geometry-msgs, ros-kilted-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kilted-etsi-its-msgs-utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libgeographiclib-dev, ros-kilted-etsi-its-msgs, ros-kilted-geometry-msgs, ros-kilted-tf2-geometry-msgs, ros-kilted-ros-workspace
+Description: ROS messages and utility functions for ETSI ITS messages
