@@ -1,9 +1,0 @@
-ros-kilted-etsi-its-conversion-srvs (3.4.0-1noble) noble; urgency=high
-
-  * Merge pull request #106 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/106> from Tezozomoc47/make-converter-service-based
-    Add the service-based approach for message conversion
-  * Contributors: Lennart Reiher
-
- -- Jean-Pierre Busch <jean-pierre.busch@rwth-aachen.de>  Thu, 16 Oct 2025 00:00:00 -0000
-
-
