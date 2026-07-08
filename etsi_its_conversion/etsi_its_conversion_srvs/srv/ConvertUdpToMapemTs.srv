@@ -1,3 +1,0 @@
-udp_msgs/UdpPacket udp_packet
----
-etsi_its_mapem_ts_msgs/MAPEM ros_msg
