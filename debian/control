@@ -1,0 +1,12 @@
+Source: ros-kilted-etsi-its-conversion-srvs
+Section: misc
+Priority: optional
+Maintainer: "Jean-Pierre Busch" <jean-pierre.busch@rwth-aachen.de>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-etsi-its-cam-msgs, ros-kilted-etsi-its-cam-ts-msgs, ros-kilted-etsi-its-cpm-ts-msgs, ros-kilted-etsi-its-denm-msgs, ros-kilted-etsi-its-denm-ts-msgs, ros-kilted-etsi-its-ivim-ts-msgs, ros-kilted-etsi-its-mapem-ts-msgs, ros-kilted-etsi-its-mcm-uulm-msgs, ros-kilted-etsi-its-spatem-ts-msgs, ros-kilted-etsi-its-vam-ts-msgs, ros-kilted-rosidl-default-generators, ros-kilted-udp-msgs, ros-kilted-ros-workspace, ros-kilted-rosidl-typesupport-fastrtps-c, ros-kilted-rosidl-typesupport-fastrtps-cpp
+Homepage: https://index.ros.org/p/etsi_its_conversion_srvs/#kilted
+Standards-Version: 3.9.2
+
+Package: ros-kilted-etsi-its-conversion-srvs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-etsi-its-cam-msgs, ros-kilted-etsi-its-cam-ts-msgs, ros-kilted-etsi-its-cpm-ts-msgs, ros-kilted-etsi-its-denm-msgs, ros-kilted-etsi-its-denm-ts-msgs, ros-kilted-etsi-its-ivim-ts-msgs, ros-kilted-etsi-its-mapem-ts-msgs, ros-kilted-etsi-its-mcm-uulm-msgs, ros-kilted-etsi-its-spatem-ts-msgs, ros-kilted-etsi-its-vam-ts-msgs, ros-kilted-rosidl-default-runtime, ros-kilted-udp-msgs, ros-kilted-ros-workspace
+Description: Services to convert ROS messages to and from ASN.1-encoded ETSI ITS messages
