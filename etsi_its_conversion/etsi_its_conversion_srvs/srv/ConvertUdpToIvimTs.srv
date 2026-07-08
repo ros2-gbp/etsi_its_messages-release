@@ -1,3 +1,0 @@
-udp_msgs/UdpPacket udp_packet
----
-etsi_its_ivim_ts_msgs/IVIM ros_msg
