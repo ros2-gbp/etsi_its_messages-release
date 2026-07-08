@@ -1,0 +1,8 @@
+ros-jazzy-etsi-its-ivim-ts-coding (3.5.0-1bookworm) bookworm; urgency=high
+
+  * Merge pull request #119 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/119> from psprenger1/feature/ivim_sync_main
+  * Contributors: Lennart Reiher
+
+ -- "Jean-Pierre Busch" <jean-pierre.busch@rwth-aachen.de>  Fri, 05 Jun 2026 22:00:00 -0000
+
+
