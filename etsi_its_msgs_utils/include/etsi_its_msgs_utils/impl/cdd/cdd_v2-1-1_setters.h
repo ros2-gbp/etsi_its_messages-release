@@ -1,28 +1,5 @@
-/*
-=============================================================================
-MIT License
-
-Copyright (c) 2023-2025 Institute for Automotive Engineering (ika), RWTH Aachen University
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-=============================================================================
-*/
+// SPDX-License-Identifier: MIT
+// Copyright Institute for Automotive Engineering (ika), RWTH Aachen University
 
 /**
  * @file impl/cdd/cdd_v2-1-1_setters.h
@@ -36,17 +13,6 @@ SOFTWARE.
 #include <etsi_its_msgs_utils/impl/checks.h>
 #include <GeographicLib/UTMUPS.hpp>
 #include <cstring>
-
-/**
- * @brief Set the Station Id object
- *
- * @param station_id
- * @param id_value
- */
-inline void setStationId(StationId& station_id, const uint32_t id_value) {
-  throwIfOutOfRange(id_value, StationId::MIN, StationId::MAX, "StationId");
-  station_id.value = id_value;
-}
 
 /**
  * @brief Set the Its Pdu Header object
@@ -63,17 +29,6 @@ inline void setItsPduHeader(ItsPduHeader& header, const uint8_t message_id, cons
   header.message_id.value = message_id;
   throwIfOutOfRange(protocol_version, OrdinalNumber1B::MIN, OrdinalNumber1B::MAX, "ProtocolVersion");
   header.protocol_version.value = protocol_version;
-}
-
-/**
- * @brief Set the Station Type
- *
- * @param station_type
- * @param value
- */
-inline void setStationType(TrafficParticipantType& station_type, const uint8_t value) {
-  throwIfOutOfRange(value, TrafficParticipantType::MIN, TrafficParticipantType::MAX, "StationType");
-  station_type.value = value;
 }
 
 /**
@@ -138,7 +93,7 @@ inline void setLateralAcceleration(AccelerationComponent& accel, const double va
 
 /**
  * @brief Set the Position Confidence Ellipse object
- * 
+ *
  * @param position_confidence_ellipse The position confidence ellipse to set
  * @param semi_major_axis The length of the semi-major axis in meters
  * @param semi_minor_axis The length of the semi-minor axis in meters
@@ -154,8 +109,8 @@ inline void setPositionConfidenceEllipse(PositionConfidenceEllipse& position_con
 
 /**
  * @brief Set the Position Confidence Ellipse object
- * 
- * @param position_confidence_ellipse 
+ *
+ * @param position_confidence_ellipse
  * @param covariance_matrix The four values of the covariance matrix in the order: cov_xx, cov_xy, cov_yx, cov_yy
  *                          The matrix has to be SPD, otherwise a std::invalid_argument exception is thrown.
  *                          Its coordinate system is aligned with the object (x = longitudinal, y = lateral)
@@ -169,8 +124,8 @@ inline void setPositionConfidenceEllipse(PositionConfidenceEllipse& position_con
 
 /**
  * @brief Set the Position Confidence Ellipse object
- * 
- * @param position_confidence_ellipse 
+ *
+ * @param position_confidence_ellipse
  * @param covariance_matrix The four values of the covariance matrix in the order: cov_xx, cov_xy, cov_yx, cov_yy
  *                          The matrix has to be SPD, otherwise a std::invalid_argument exception is thrown.
  *                          Its coordinate system is aligned with the WGS axes (x = North, y = East)
