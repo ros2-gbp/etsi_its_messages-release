@@ -1,0 +1,16 @@
+ros-kilted-etsi-its-conversion-srvs (3.5.0-1noble) noble; urgency=high
+
+  * Merge pull request #119 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/119> from psprenger1/feature/ivim_sync_main
+  * Contributors: Lennart Reiher
+
+ -- "Jean-Pierre Busch" <jean-pierre.busch@rwth-aachen.de>  Fri, 05 Jun 2026 22:00:00 -0000
+
+ros-kilted-etsi-its-conversion-srvs (3.4.0-1noble) noble; urgency=high
+
+  * Merge pull request #106 <https://github.com/ika-rwth-aachen/etsi_its_messages/issues/106> from Tezozomoc47/make-converter-service-based
+    Add the service-based approach for message conversion
+  * Contributors: Lennart Reiher
+
+ -- "Jean-Pierre Busch" <jean-pierre.busch@rwth-aachen.de>  Wed, 15 Oct 2025 22:00:00 -0000
+
+
