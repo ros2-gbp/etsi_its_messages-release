@@ -1,30 +1,10 @@
-/** ============================================================================
-MIT License
-
-Copyright (c) 2023-2025 Institute for Automotive Engineering (ika), RWTH Aachen University
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-============================================================================= */
+// SPDX-License-Identifier: MIT
+// Copyright Institute for Automotive Engineering (ika), RWTH Aachen University
 
 #pragma once
 
 #include "etsi_its_cam_msgs/msg/cam.hpp"
+#include "etsi_its_cam_ts_msgs/msg/cam.hpp"
 
 #include "displays/CAM/cam_render_object.hpp"
 
@@ -57,8 +37,7 @@ namespace displays
  * @class CAMDisplay
  * @brief Displays an etsi_its_cam_msgs::CAM
  */
-class CAMDisplay : public
-  rviz_common::RosTopicDisplay<etsi_its_cam_msgs::msg::CAM>
+class CAMDisplay : public rviz_common::_RosTopicDisplay
 {
   Q_OBJECT
 
@@ -70,13 +49,43 @@ public:
 
   void reset() override;
 
+  void setTopic(const QString & topic, const QString & datatype) override;
+
+protected Q_SLOTS:
+  void updateTopic() override;
+
 protected:
-  void processMessage(etsi_its_cam_msgs::msg::CAM::ConstSharedPtr msg) override;
+  // CAM type detection
+  enum class CamType
+  {
+    NONE,
+    RELEASE_1,
+    RELEASE_2
+  };
+  CamType detectCamType(const std::string & topic);
+
+  void subscribe();
+  void unsubscribe();
+  void onEnable() override;
+  void onDisable() override;
+
+  // Unified handler that accepts either CAM (release 1) or CAM TS (release 2)
+  void processMessage(const std::variant<
+      etsi_its_cam_msgs::msg::CAM,
+      etsi_its_cam_ts_msgs::msg::CAM
+    > & msg_variant);
+
   void update(float wall_dt, float ros_dt) override;
 
   Ogre::ManualObject * manual_object_;
 
   rclcpp::Node::SharedPtr rviz_node_;
+  std::shared_ptr<rclcpp::SubscriptionBase> subscription_;
+  rclcpp::TimerBase::SharedPtr topic_check_timer_;
+
+  CamType active_cam_type_;
+  rclcpp::Time subscription_start_time_;
+  uint32_t messages_received_;
 
   // Properties
   rviz_common::properties::BoolProperty *show_meta_, *show_station_id_, *show_speed_;
